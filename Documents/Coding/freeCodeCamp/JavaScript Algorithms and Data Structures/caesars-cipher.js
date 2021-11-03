@@ -13,7 +13,7 @@ function rot13(str) {
       }
       else {arr.push(String.fromCharCode(str.charCodeAt(i)))}
     }
-    return arr.join("")
+    return arr.join("");
   }
   
   rot13("SERR PBQR PNZC");
