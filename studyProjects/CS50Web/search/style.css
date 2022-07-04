@@ -1,0 +1,7 @@
+h1 {
+    text-align: center; font-size: 200px;  
+}
+.textInput {border-radius: 20px/20px; height: 40px;}
+.textInputLeft {border-radius: 5px/5px; height: 30px;}
+#advanced {text-align: left; padding: 10px;}
+div > label {padding-left: 10px;}

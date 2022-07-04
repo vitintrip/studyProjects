@@ -1,0 +1,26 @@
+{% extends "encyclopedia/layout.html" %}
+
+{% block title %}
+    Write new page
+{% endblock %}
+
+{% block body %}
+    <h1>Create new entry</h1>
+    <h3 id="error">{{ errorMessage }}</h3>
+    {% if errorMessage %}
+    <a href="/entry/{{ title }}">{{ title }}</a>
+    {% endif %}
+    <div>
+        <form id="NewEntryForm" action="/new_page" method="post">
+            {% csrf_token %}
+            <label>Title:</label><br>
+            <input type="text" name="Title" value="{{title}}">
+            <br>
+            <label for="TextArea">Entry in Markdown:</label><br>
+            <textarea id="TextAreaId" name="TextAreaName" form="NewEntryForm" required>{{ entry }}</textarea>
+            <input type="submit">
+        </form>
+    </div>
+    
+
+{% endblock %}
